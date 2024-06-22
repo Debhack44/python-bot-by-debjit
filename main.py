@@ -266,7 +266,7 @@ def send_text(message):
         bot.send_message(OWNER_ID, "Your bot got an error fix it fast!\n Error on command: "+message.text)
         return
 
-def trx_address(message):
+def upi_address(message):
    try:
     if message.text == "🚫 Cancel":
         return menu(message.chat.id)
