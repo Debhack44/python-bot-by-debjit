@@ -209,7 +209,7 @@ def send_text(message):
         send = bot.send_message(message.chat.id, "_⚠️Send your Upi Address._",
                                 parse_mode="Markdown", reply_markup=keyboard)
         # Next message will call the name_handler function
-        bot.register_next_step_handler(message, trx_address)
+        bot.register_next_step_handler(message, Upi_address)
     if message.text == "🎁 Bonus":
         user_id = message.chat.id
         user = str(user_id)
@@ -282,7 +282,7 @@ def trx_address(message):
         return menu(message.chat.id)
     else:
         bot.send_message(
-            message.chat.id, "*⚠️ It's Not a Valid Trx Address!*", parse_mode="Markdown")
+            message.chat.id, "*⚠️ It's Not a Valid Upi Address!*", parse_mode="Markdown")
         return menu(message.chat.id)
    except:
         bot.send_message(message.chat.id, "This command having error pls wait for ficing the glitch by admin")
